@@ -17,6 +17,12 @@
                 font-family: 'Noto Sans', sans-serif;
             }
 
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
             .page-wrapper {
                 height: 100svh;
                 max-height: 100svh;
@@ -56,7 +62,6 @@
             .side-selection-bar {
                 grid-column: 1 / 4;
                 grid-row: 5 / 13;
-                background-color: aqua;
 
                 display: flex;
                 flex-direction: column;
@@ -66,16 +71,23 @@
             }
 
             .side-selection-btn {
-                flex: 1;
-
-                padding: 1rem;
+                padding: 1rem 2rem;
                 font-size: 24px;
                 font-weight: 900;
 
                 background-color: yellow;
+                border-radius: 0.5rem;
 
                 cursor: pointer;
                 border: 0px solid transparent;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .side-selection-img {
+                font-size: 64px;
             }
 
             .product-display {
@@ -92,10 +104,22 @@
                 <nav class="navbar-container"></nav>
                 <div class="bill-board"></div>
                 <div class="side-selection-bar">
-                    <button class="side-selection-btn">Button</button>
-                    <button class="side-selection-btn">Button</button>
-                    <button class="side-selection-btn">Button</button>
-                    <button class="side-selection-btn">Button</button>
+                    <button class="side-selection-btn">
+                        <span>Trending</span>
+                        <span class="side-selection-img">🔥</span>
+                    </button>
+                    <button class="side-selection-btn">
+                        <span>Shoes</span>
+                        <span class="side-selection-img">👟</span>
+                    </button>
+                    <button class="side-selection-btn">
+                        <span>Clothes</span>
+                        <span class="side-selection-img">👚</span>
+                    </button>
+                    <button class="side-selection-btn">
+                        <span>Discount</span>
+                        <span class="side-selection-img">%</span>
+                    </button>
                 </div>
                 <div class="product-display"></div>
             </div>
