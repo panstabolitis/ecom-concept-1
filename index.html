@@ -16,16 +16,14 @@
                 overflow: hidden;
                 font-family: 'Noto Sans', sans-serif;
                 position: relative;
+                background-color: #000;
+                color: #fff;
             }
 
             img {
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
-            }
-
-            .body-background {
-
             }
 
             .circle {
@@ -103,29 +101,28 @@
             }
 
             .side-selection-btn {
-                padding: 1rem 2rem;
-                font-size: 24px;
+                padding: 0.5rem 1rem;
+                font-size: 16px;
                 font-weight: 900;
 
-                background-color: yellow;
-                border-radius: 0.5rem;
+                background-color: #ffffff25;
+                border: thin solid blue;
+                border-radius: 0.25rem;
+                backdrop-filter: blur(1px);
 
                 cursor: pointer;
-                border: 0px solid transparent;
 
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                color: #fff;
             }
 
             .side-selection-img {
+                display: none;
                 font-size: 64px;
             }
 
             .product-display {
                 grid-column: 4 / 13;
                 grid-row: 5 / 13;
-                background-color: aquamarine;
             }
 
             .product-grid {
@@ -138,7 +135,8 @@
             }
 
             .product {
-                background-color: brown;
+                background-color: #ffffff25;
+                border: thin solid blue;
             }
 
         </style>
@@ -155,17 +153,8 @@
                 <nav class="navbar-container"></nav>
                 <div class="bill-board"></div>
                 <div class="side-selection-bar">
-                    <button class="side-selection-btn">
-                        <span>Trending</span>
-                        <span class="side-selection-img">🔥</span>
-                    </button>
-                    <button class="side-selection-btn">
-                        <span>Courses</span>
-                        <span class="side-selection-img">📚</span>
-                    </button>
-                    <button class="side-selection-btn"></button>
-                    <button class="side-selection-btn"></button>
-                    <button class="side-selection-btn"></button>
+                    <button class="side-selection-btn">Trending</button>
+                    <button class="side-selection-btn">Courses</button>
                 </div>
                 <div class="product-display">
                     <div class="product-grid">
