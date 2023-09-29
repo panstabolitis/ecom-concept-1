@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <style>
+            *::before, *::after, * {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+
+            html, body {
+                overflow: hidden;
+                font-family: 'Noto Sans', sans-serif;
+            }
+
+            .page-wrapper {
+                height: 100svh;
+                max-height: 100svh;
+                width: 100vw;
+                max-width: 100vw;
+
+                overflow: auto;
+            }
+
+            .grid {
+                height: 100%;
+                width: 100%;
+
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-rows: repeat(12, 1fr);
+
+                background-color: purple;
+
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .navbar-container {
+                grid-column: 1 / 13;
+                grid-row: 1 / 2;
+
+                background-color: aqua;
+            }
+
+            .bill-board {
+                grid-column: 1 / 13;
+                grid-row: 2 / 5;
+                background-color: aquamarine;
+            }
+
+            .side-selection-bar {
+                grid-column: 1 / 4;
+                grid-row: 5 / 13;
+                background-color: aqua;
+            }
+
+            .product-display {
+                grid-column: 4 / 13;
+                grid-row: 5 / 13;
+                background-color: aquamarine;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="page-wrapper">
+            <div class="grid">
+                <nav class="navbar-container"></nav>
+                <div class="bill-board"></div>
+                <div class="side-selection-bar"></div>
+                <div class="product-display"></div>
+            </div>
+        </div>
+    </body>
+</html>
