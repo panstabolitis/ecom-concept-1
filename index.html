@@ -15,6 +15,7 @@
             html, body {
                 overflow: hidden;
                 font-family: 'Noto Sans', sans-serif;
+                position: relative;
             }
 
             img {
@@ -23,13 +24,46 @@
                 object-fit: cover;
             }
 
+            .body-background {
+
+            }
+
+            .circle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 5;
+                border-radius: 50%;
+            }
+
+            .circle-1 {
+                height: 1500px;
+                width: 1500px;
+                border: thin solid purple;
+            }
+
+            .circle-2 {
+                height: 1000px;
+                width: 1000px;
+                border: thin solid purple;
+            }
+
+            .circle-3 {
+                height: 500px;
+                width: 500px;
+                border: thin solid purple;
+            }
+
             .page-wrapper {
+                position: absolute;
                 height: 100svh;
                 max-height: 100svh;
                 width: 100vw;
                 max-width: 100vw;
 
                 overflow: auto;
+                z-index: 10;
             }
 
             .grid {
@@ -39,8 +73,6 @@
                 display: grid;
                 grid-template-columns: repeat(12, 1fr);
                 grid-template-rows: repeat(12, 1fr);
-
-                background-color: purple;
 
                 gap: 1rem;
                 padding: 1rem;
@@ -96,9 +128,28 @@
                 background-color: aquamarine;
             }
 
+            .product-grid {
+                display: grid;
+                height: 100%;
+                width: 100%;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .product {
+                background-color: brown;
+            }
+
         </style>
     </head>
     <body>
+        <div class="body-background">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+
+        </div>
         <div class="page-wrapper">
             <div class="grid">
                 <nav class="navbar-container"></nav>
@@ -109,19 +160,21 @@
                         <span class="side-selection-img">🔥</span>
                     </button>
                     <button class="side-selection-btn">
-                        <span>Shoes</span>
-                        <span class="side-selection-img">👟</span>
+                        <span>Courses</span>
+                        <span class="side-selection-img">📚</span>
                     </button>
-                    <button class="side-selection-btn">
-                        <span>Clothes</span>
-                        <span class="side-selection-img">👚</span>
-                    </button>
-                    <button class="side-selection-btn">
-                        <span>Discount</span>
-                        <span class="side-selection-img">%</span>
-                    </button>
+                    <button class="side-selection-btn"></button>
+                    <button class="side-selection-btn"></button>
+                    <button class="side-selection-btn"></button>
                 </div>
-                <div class="product-display"></div>
+                <div class="product-display">
+                    <div class="product-grid">
+                        <div class="product">product</div>
+                        <div class="product">product</div>
+                        <div class="product">product</div>
+                        <div class="product">product</div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
