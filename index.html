@@ -57,6 +57,25 @@
                 grid-column: 1 / 4;
                 grid-row: 5 / 13;
                 background-color: aqua;
+
+                display: flex;
+                flex-direction: column;
+
+                overflow: auto;
+                gap: 1rem;
+            }
+
+            .side-selection-btn {
+                flex: 1;
+
+                padding: 1rem;
+                font-size: 24px;
+                font-weight: 900;
+
+                background-color: yellow;
+
+                cursor: pointer;
+                border: 0px solid transparent;
             }
 
             .product-display {
@@ -72,7 +91,12 @@
             <div class="grid">
                 <nav class="navbar-container"></nav>
                 <div class="bill-board"></div>
-                <div class="side-selection-bar"></div>
+                <div class="side-selection-bar">
+                    <button class="side-selection-btn">Button</button>
+                    <button class="side-selection-btn">Button</button>
+                    <button class="side-selection-btn">Button</button>
+                    <button class="side-selection-btn">Button</button>
+                </div>
                 <div class="product-display"></div>
             </div>
         </div>
