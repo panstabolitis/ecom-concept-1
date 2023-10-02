@@ -129,20 +129,39 @@
                 display: grid;
                 height: 100%;
                 width: 100%;
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
                 gap: 1rem;
             }
 
             .product {
+                position: relative;
+
                 border: thin solid blue;
                 display: flex;
                 flex-direction: column;
             }
 
             .product-image {
-                height: 150px;
+                height: 100%;
                 width: 100%;
                 background-color: gray;
+            }
+
+            .product-action-btn {
+                position: absolute;
+
+                bottom: 0;
+                left: 0;
+                background-color: green;
+                border: 0px solid transparent;
+                color: #fff;
+                width: 100%;
+            }
+
+            .product-title {
+                font-size: 16px;
+                font-weight: 900;
             }
 
         </style>
@@ -166,12 +185,7 @@
                         <div class="product">
                             <div class="product-image"></div>
                             <div>
-                                <button>Closet</button>
-                                <button>About</button>
-                                <button>Reviews</button>
-                            </div>
-                            <div>
-                                <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, atque.</h1>
+                                <h1 class="product-title">Product Title</h1>
                             </div>
                             <button>BUY NOW</button>
                         </div>
