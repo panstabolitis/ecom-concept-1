@@ -103,9 +103,8 @@
             .side-selection-btn {
                 padding: 0.5rem 1rem;
                 font-size: 16px;
-                font-weight: 900;
+                font-weight: 100;
 
-                background-color: #ffffff25;
                 border: thin solid blue;
                 border-radius: 0.25rem;
                 backdrop-filter: blur(1px);
@@ -113,6 +112,7 @@
                 cursor: pointer;
 
                 color: #fff;
+                background-color: transparent;
             }
 
             .side-selection-img {
@@ -129,14 +129,18 @@
                 display: grid;
                 height: 100%;
                 width: 100%;
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(2, 1fr);
+                grid-template-columns: repeat(4, 1fr);
                 gap: 1rem;
             }
 
             .product {
-                background-color: #ffffff25;
                 border: thin solid blue;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .product-image {
+                height: 150px;
             }
 
         </style>
@@ -152,10 +156,10 @@
             <div class="grid">
                 <nav class="navbar-container"></nav>
                 <div class="bill-board"></div>
-                <div class="side-selection-bar">
-                    <button class="side-selection-btn">Trending</button>
-                    <button class="side-selection-btn">Courses</button>
-                </div>
+                <ul class="side-selection-bar">
+                    <li class="side-selection-btn">Button 1</li>
+                    <li class="side-selection-btn">Button 2</li>
+                </ul>
                 <div class="product-display">
                     <div class="product-grid">
                         <div class="product">product</div>
